@@ -40,7 +40,8 @@
 
 - (void)textViewDidBeginEditing:(UITextView *)textView
 {
-    [UIView animateWithDuration:0.26 animations:^{
+    
+    [UIView animateWithDuration:0.3f delay:0.0f options:UIViewAnimationOptionCurveEaseInOut animations:^{
         CGRect r = self.textContainerView.frame;
         r.origin.y = self.view.frame.size.height - 216 - r.size.height;
         self.textContainerView.frame = r;
@@ -48,12 +49,20 @@
         r = self.tableView.frame;
         r.size.height = self.view.frame.size.height - 216 - self.textContainerView.frame.size.height;
         self.tableView.frame = r;
+        
+    } completion:^(BOOL finished) {
+        
     }];
+    
+    
+    
 }
 
 - (void)textViewDidEndEditing:(UITextView *)textView
 {
-    [UIView animateWithDuration:0.26 animations:^{
+
+    [UIView animateWithDuration:0.3f delay:0.0f options:UIViewAnimationOptionAllowAnimatedContent | UIViewAnimationOptionCurveEaseInOut animations:^{
+        
         CGRect r = self.textContainerView.frame;
         r.origin.y = self.view.frame.size.height - r.size.height;
         self.textContainerView.frame = r;
@@ -61,7 +70,13 @@
         r = self.tableView.frame;
         r.size.height = self.view.frame.size.height - self.textContainerView.frame.size.height;
         self.tableView.frame = r;
-    }];
+        
+        self.tableView.contentOffset = CGPointMake(0.0f, self.tableView.contentSize.height - r.size.height + 1.0f);
+        
+    } completion:^(BOOL finished) {
+        
+    }];        
+    
 }
 
 #pragma mark - UITableViewDataSource

@@ -71,7 +71,11 @@
         r.size.height = self.view.frame.size.height - self.textContainerView.frame.size.height;
         self.tableView.frame = r;
         
+        if (self.tableView.contentOffset.y == self.tableView.contentSize.height - self.tableView.frame.size.height) {
+        
         self.tableView.contentOffset = CGPointMake(0.0f, self.tableView.contentSize.height - r.size.height + 1.0f);
+            
+        }
         
     } completion:^(BOOL finished) {
         

@@ -41,7 +41,7 @@
 - (void)textViewDidBeginEditing:(UITextView *)textView
 {
     
-    [UIView animateWithDuration:0.3f delay:0.0f options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    [UIView animateWithDuration:0.25 delay:0.0f options:0 animations:^{
         CGRect r = self.textContainerView.frame;
         r.origin.y = self.view.frame.size.height - 216 - r.size.height;
         self.textContainerView.frame = r;
@@ -61,7 +61,7 @@
 - (void)textViewDidEndEditing:(UITextView *)textView
 {
 
-    [UIView animateWithDuration:0.3f delay:0.0f options:UIViewAnimationOptionAllowAnimatedContent | UIViewAnimationOptionCurveEaseInOut animations:^{
+    [UIView animateWithDuration:0.25 delay:0.0f options:UIViewAnimationOptionAllowAnimatedContent animations:^{
         
         CGRect r = self.textContainerView.frame;
         r.origin.y = self.view.frame.size.height - r.size.height;

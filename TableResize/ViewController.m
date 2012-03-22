@@ -10,25 +10,77 @@
 
 @interface ViewController ()
 
+@property (nonatomic, copy) NSArray *dataArray;
+
 @end
 
 @implementation ViewController
+@synthesize tableView = _tableView;
+@synthesize textContainerView;
+@synthesize textView;
+@synthesize dataArray;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.dataArray = [[NSArray alloc] initWithObjects:@"lmao", @"rofl", @"lol", @"you", @"are", @"a", @"fucking", @"dick", nil];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+#pragma mark - UITextViewDelegate
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    [UIView animateWithDuration:0.26 animations:^{
+        CGRect r = self.textContainerView.frame;
+        r.origin.y = self.view.frame.size.height - 216 - r.size.height;
+        self.textContainerView.frame = r;
+        
+        r = self.tableView.frame;
+        r.size.height = self.view.frame.size.height - 216 - self.textContainerView.frame.size.height;
+        self.tableView.frame = r;
+    }];
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    [UIView animateWithDuration:0.26 animations:^{
+        CGRect r = self.textContainerView.frame;
+        r.origin.y = self.view.frame.size.height - r.size.height;
+        self.textContainerView.frame = r;
+        
+        r = self.tableView.frame;
+        r.size.height = self.view.frame.size.height - self.textContainerView.frame.size.height;
+        self.tableView.frame = r;
+    }];
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.dataArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    cell.textLabel.text = [self.dataArray objectAtIndex:indexPath.row];
+    return cell;
+}
+
+- (IBAction)derpButtonTouchUpInside:(id)sender 
+{
+    [self.textView resignFirstResponder];
 }
 
 @end

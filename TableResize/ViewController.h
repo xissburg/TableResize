@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITextViewDelegate, UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIView *textContainerView;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+
+- (IBAction)derpButtonTouchUpInside:(id)sender;
 
 @end

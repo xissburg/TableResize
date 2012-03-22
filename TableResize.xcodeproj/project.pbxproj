@@ -22,14 +22,14 @@
 		1BE08FAA151B997A0097C6DD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1BE08FAC151B997A0097C6DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1BE08FAE151B997A0097C6DD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		1BE08FB2151B997A0097C6DD /* TableResize-Info.plist */ = {isa = PBXFileReference; path = "TableResize-Info.plist"; sourceTree = "<group>"; };
+		1BE08FB2151B997A0097C6DD /* TableResize-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TableResize-Info.plist"; sourceTree = "<group>"; };
 		1BE08FB4151B997A0097C6DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1BE08FB6151B997A0097C6DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1BE08FB8151B997A0097C6DD /* TableResize-Prefix.pch */ = {isa = PBXFileReference; path = "TableResize-Prefix.pch"; sourceTree = "<group>"; };
-		1BE08FB9151B997A0097C6DD /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		1BE08FB8151B997A0097C6DD /* TableResize-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TableResize-Prefix.pch"; sourceTree = "<group>"; };
+		1BE08FB9151B997A0097C6DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1BE08FBA151B997A0097C6DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1BE08FBD151B997A0097C6DD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		1BE08FBF151B997A0097C6DD /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		1BE08FBF151B997A0097C6DD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1BE08FC0151B997A0097C6DD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
